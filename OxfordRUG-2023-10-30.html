@@ -30,6 +30,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #adadbd;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #adadbd;  padding-left: 4px; }
+    div.sourceCode
+      { color: #2e2e2f;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #2e2e2f; } /* Normal */
+    code span.al { color: #ae4240; } /* Alert */
+    code span.an { color: #494957; } /* Annotation */
+    code span.at { color: #775781; } /* Attribute */
+    code span.bn { color: #ae4240; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #956133; } /* ControlFlow */
+    code span.ch { color: #618157; } /* Char */
+    code span.cn { color: #956133; } /* Constant */
+    code span.co { color: #494957; } /* Comment */
+    code span.cv { color: #494957; font-style: italic; } /* CommentVar */
+    code span.do { color: #494957; font-style: italic; } /* Documentation */
+    code span.dt { color: #ae4240; } /* DataType */
+    code span.dv { color: #ae4240; } /* DecVal */
+    code span.er { color: #ae4240; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ae4240; } /* Float */
+    code span.fu { color: #336695; } /* Function */
+    code span.im { color: #775781; } /* Import */
+    code span.in { color: #494957; } /* Information */
+    code span.kw { color: #2e2e2f; } /* Keyword */
+    code span.op { color: #494957; } /* Operator */
+    code span.ot { color: #494957; } /* Other */
+    code span.pp { color: #ae4240; } /* Preprocessor */
+    code span.re { color: #336695; } /* RegionMarker */
+    code span.sc { color: #494957; } /* SpecialChar */
+    code span.ss { color: #618157; } /* SpecialString */
+    code span.st { color: #618157; } /* String */
+    code span.va { color: #2e2e2f; } /* Variable */
+    code span.vs { color: #618157; } /* VerbatimString */
+    code span.wa { color: #494957; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="OxfordRUG-2023-10-30_files/libs/revealjs/dist/theme/quarto.css">
   <link href="OxfordRUG-2023-10-30_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -343,6 +409,17 @@ Heather Turner and Ella Kaye
 </section>
 
 
+<section id="the-r-project-1" class="slide level2">
+<h2>The R Project</h2>
+<p>A little history:</p>
+<ul>
+<li>1992: Robert Gentleman and Ross Ihaka (NZ) develop early version of R</li>
+<li>1995: Martin Mächler (CH) persuades them to release R under GNU GPL</li>
+<li>1997: R Core team established, initially 8 members</li>
+</ul>
+<p>The Core Team maintain the core codebase and set of base R packages.</p>
+<p>The R Project is a little wider, includes CRAN.</p>
+</section>
 <section id="sustainability" class="slide level2">
 <h2>Sustainability</h2>
 <p>Those who contributed the most to R early on are now near the end of their careers, only partially replaced by new contributors.</p>
@@ -395,34 +472,21 @@ Heather Turner and Ella Kaye
 </div>
 <p><span class="smaller70">Data source: Pinto et al.&nbsp;2018, DOI: <a href="https://ieeexplore.ieee.org/document/8330263">10.1109/SANER.2018.8330263</a></span></p>
 </section>
-<section id="benefits-of-a-diverse-community" class="slide level2">
-<h2>Benefits of a diverse community</h2>
+<section id="why-worry-about-diversity" class="slide level2">
+<h2>Why worry about diversity?</h2>
 <ul>
-<li>Increasing innovation</li>
+<li>Developer community should represent the user community</li>
 <li>Increasing sustainability</li>
+<li>Increasing innovation</li>
 <li>Decreased duplication of effort as people work together</li>
+<li>More welcoming community: motivates contribution</li>
 </ul>
-<div class="fragment">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Personal reflection</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li>A diverse, welcoming community is pleasurable to be involved in (as opposed to off-putting)</li>
-<li>Motivates a desire to contribute.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
 </section>
 <section id="r-contribution-working-group" class="slide level2">
 <h2>R Contribution Working Group</h2>
-<p>Established July 2020</p>
+<p>Established July 2020 as collaboration between R Core and community groups</p>
 <ul>
-<li>Social media (Slack, Twitter, Mastodon)</li>
+<li>Social media</li>
 <li>Novice-friendly documentation</li>
 <li>Short-term paid projects (GSoC, GSoD)</li>
 <li>Events for novice contributors</li>
@@ -438,22 +502,44 @@ Heather Turner and Ella Kaye
 </section>
 <section id="slack" class="slide level2">
 <h2>Slack</h2>
+<p><a href="https://contributor.r-project.org/slack" class="uri">https://contributor.r-project.org/slack</a></p>
+<p>Supportive space to foster the community of R contributors</p>
+<ul>
+<li>Potential/novice contributors wanting support to get started/develop as contributors.</li>
+<li>Experienced contributors and members of R Core willing to provide ad-hoc support.</li>
+<li>Community organizers wanting to connect their communities with this initiative.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>It is a space to discuss coding issues, the wider development process and outreach initiatives.</li>
+<li>Link gives more info about the group and how to join</li>
+<li>Includes posting guide and CoC</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="r-development-guide" class="slide level2">
 <h2>R Development Guide</h2>
-<p><a href="https://contributor.r-project.org/rdevguide/" class="uri">https://contributor.r-project.org/rdevguide/</a></p>
+<p>R Foundation funded 12 week project. Saranjeet Kaur Bhogal (technical writer), Heather Turner and Michael Lawrence (supervisors).<br>
+<a href="https://contributor.r-project.org/rdevguide/" class="uri">https://contributor.r-project.org/rdevguide/</a></p>
 <div class="columns">
 <div class="column" style="width:60%;">
-<p><img data-src="figures/r_dev_guide.png"></p>
+<p><img data-src="images/r_dev_guide.png"></p>
 </div><div class="column" style="width:40%;">
 <ul>
 <li>Novice-friendly</li>
-<li>Initial focus on established workflows for bugs &amp; translations</li>
-<li>Recent/ongoing:
-<ul>
-<li>Further topics</li>
-<li>Alternative workflows</li>
-</ul></li>
+<li>Installing R-devel on Windows</li>
+<li>Bug Tracking</li>
+<li>Bug Review (<a href="https://blog.r-project.org/2019/10/09/r-can-use-your-help-reviewing-bug-reports/">R Can Use Your Help: Reviewing Bug Reports</a>)</li>
 </ul>
 </div>
 </div>
@@ -473,10 +559,42 @@ Heather Turner and Ella Kaye
 </section>
 <section id="user-2021-tutorials" class="slide level2">
 <h2>useR! 2021 tutorials</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><a href="https://contributor.r-project.org/tutorials/contributing-to-r">Contributing to R</a>, Gabriel Becker and Martin Maechler, useR! 2021. 2h15 video (or 1h30 abridged).</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/CZmldTOdlRM" title="Contributing to R" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</div><div class="column" style="width:50%;">
+<p><a href="https://contributor.r-project.org/tutorials/translating-r-to-your-language/">Translating R to your Language</a>, Michael Chirico and Michael Lawrence, useR! 2021. 1h30 video.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/S3Qhqf9u6ao" title="Translating R to your language" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</div>
+</div>
+<p>Follow the links for further detail, with slides and exercises.</p>
 </section></section>
-<section id="section" class="title-slide slide level1 inverse center-h middle center">
-<h1></h1>
-<p><span class="larger200"><strong>EPSRC RSE Fellowship</strong></span></p>
+<section id="epsrc-rse-fellowship" class="title-slide slide level1 inverse center">
+<h1>EPSRC RSE Fellowship</h1>
+<div class="columns">
+<div class="column" style="width:35%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/heather_turner.jpg"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:65%;">
+<div class="center">
+<p>“Sustainability &amp; EDI in the R Project”</p>
+</div>
+<p>💻 Contributing to the R project through code, infrastructure &amp; outreach.<br>
+📦 Contributing to packages on CRAN.<br>
+🚀 Capacity-building in R and data science at Warwick University.<br>
+💪 Community-building in the R and RSE communities with a focus on EDI.</p>
+</div>
+</div>
 </section>
 
 <section>
@@ -486,10 +604,26 @@ Heather Turner and Ella Kaye
 </section>
 <section id="improved-communications" class="slide level2">
 <h2>Improved communications</h2>
-<p>website, twitter</p>
+<p>&lt;contributor.r-project.org&gt;</p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><a href="https://contributor.r-project.org/"> <img src="images/R_Contributor_Site.png"> </a></p>
+</div><div class="column" style="width:40%;">
+<ul>
+<li>Improved website on R-project.org domain
+<ul>
+<li>Joining page for Slack</li>
+<li>Links to R Dev Guide and useR! tutorials</li>
+<li>Event calendar</li>
+</ul></li>
+<li>New Twitter account: <a href="https://twitter.com/R_Contributors"><span class="citation" data-cites="_R_Contributors">@_R_Contributors</span></a></li>
+</ul>
+</div>
+</div>
 </section>
-<section id="event-collaboration-campfires" class="slide level2">
-<h2>Event: Collaboration Campfires</h2>
+<section id="collaboration-campfires" class="slide level2">
+<h2>Collaboration Campfires</h2>
+<p><a href="https://www.codeforsociety.org/incubator/projects/building-community-around-the-r-development-guide">Code for Science &amp; Society Digital Infrastructure Incubator project</a> with Saranjeet Kaur Bhogal</p>
 <div class="columns">
 <div class="column" style="width:60%;">
 <ul>
@@ -501,16 +635,42 @@ Heather Turner and Ella Kaye
 <p><img data-src="images/collaboration-campfires.jpg"></p>
 </div>
 </div>
+<aside class="notes">
+<p>TODO: How many people came?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="campfire-topic-bug-handling" class="slide level2">
 <h2>Campfire Topic: Bug Handling</h2>
 <p><a href="https://bugs.r-project.org" class="uri">https://bugs.r-project.org</a></p>
+<div class="columns">
+<div class="column" style="width:40%;">
 <ul>
 <li>Exploring R’s Bugzilla</li>
 <li>Reviewing bugs</li>
 </ul>
-
-<img data-src="figures/bug_status.png" width="537" class="r-stretch quarto-figure-center"><aside class="notes">
+</div><div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/bug_status.png" width="537"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
 <p>lots unconfirmed - confirming they are really bugs is something that novice contributors can do</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -526,12 +686,26 @@ Heather Turner and Ella Kaye
 </section>
 <section id="campfire-topic-localisationtranslation" class="slide level2">
 <h2>Campfire Topic: Localisation/translation</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/translation_status.png" width="663"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
 <ul>
 <li>Exploring status of translations</li>
-<li>Contributing translations</li>
+<li>Introduction to translation infrastructure</li>
+<li><a href="https://blog.r-project.org/2022/07/25/r-can-use-your-help-translating-r-messages/index.html">Post on R Blog</a></li>
 </ul>
-
-<img data-src="figures/translation_status.png" width="663" class="r-stretch quarto-figure-center"><aside class="notes">
+</div>
+</div>
+<aside class="notes">
 <p>translations of messages Spanish is an interesting case, given large Spanish-speaking userbase</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -545,9 +719,8 @@ Heather Turner and Ella Kaye
           display:block!important;
       }</style></aside>
 </section>
-<section id="event-bug-bbq" class="slide level2">
-<h2>Event: Bug BBQ</h2>
-<div class="columns">
+<section id="bug-bbq-user-2022" class="slide level2">
+<h2>Bug BBQ (useR! 2022)</h2>
 <div class="column" style="width:60%;">
 <ul>
 <li>Global, online, 24-hour event to work on open bugs.</li>
@@ -562,7 +735,8 @@ Heather Turner and Ella Kaye
 </ul></li>
 <li><a href="https://github.com/r-devel/rcontribution/blob/main/bug_bbq/Bug_BBQ_retrospective.md">Full report</a></li>
 </ul>
-</div><div class="column" style="width:40%;">
+</div>
+<div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/bug-catching.jpg"></p>
@@ -570,11 +744,31 @@ Heather Turner and Ella Kaye
 </figure>
 </div>
 </div>
-</div>
+<p>::::</p>
 </section></section>
-<section id="section-1" class="title-slide slide level1 inverse center-h middle center">
-<h1></h1>
-<p><span class="larger200"><strong>EK joins the team!</strong></span></p>
+<section id="ella-kaye-joins-the-team" class="title-slide slide level1 inverse center">
+<h1>Ella Kaye Joins The Team!</h1>
+<div class="columns">
+<div class="column" style="width:35%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/ella_profile.jpg"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:65%;">
+<p>Particular focus:</p>
+<ul>
+<li>R training at Warwick</li>
+<li>Community outreach (RainbowR)</li>
+<li>General engagement with R Contributor activities</li>
+</ul>
+<p>⛰️ More capacity for bigger challenges!</p>
+</div>
+</div>
 </section>
 
 <section>
@@ -582,23 +776,31 @@ Heather Turner and Ella Kaye
 <h1>Heading for the sprint</h1>
 
 </section>
-<section id="infrastructure-weblate" class="slide level2">
-<h2>Infrastructure: Weblate</h2>
-<p><a href="https://translate.rx.studio" class="uri">https://translate.rx.studio</a></p>
+<section id="gsoc-2022-project-translation-dashboard" class="slide level2">
+<h2>GSoC 2022 project: Translation Dashboard</h2>
+<p>Supervised by Ben Ubah and Mike Chirico<br>
+<a href="https://github.com/rstats-gsoc/gsoc2022/wiki/Track-R-Translations-Status">Track R Translations Status</a></p>
+
+<img data-src="images/translation_dashboard.png" style="width:90.0%" alt="Screenshot of top of R Translations Status Dashboard" class="r-stretch quarto-figure-center"></section>
+<section id="weblate-interface" class="slide level2">
+<h2>Weblate interface</h2>
+<p>Set up summer 2022 by Gergely Daróczi<br>
+<a href="https://translate.rx.studio" class="uri">https://translate.rx.studio</a></p>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/weblate.png"></p>
-<figcaption>Screenshot from Weblate</figcaption>
+<p><img data-src="images/weblate.png" style="width:90.0%" alt="Screenshot from Weblate"></p>
 </figure>
 </div>
-</div><div class="column" style="width:50%;">
+</div>
+</div>
+</div><div class="column" style="width:40%;">
 <ul>
-<li>Set up summer 2022 by Gergely Daróczi</li>
 <li>Web interface makes it easy to work on translations for R</li>
-<li><a href="https://github.com/r-devel/r-svn/commit/dd4ed6ffc9b620c7b4a92f8cb9dab9ecc8b5890c">Incorporated into base R</a></li>
-<li><a href="https://daroczig.github.io/slides/2022-06-22-useR_2022_poster-Gergely_Daroczi-Internationalization_of_R_packages_with_r18r.pdf">Poster</a>, <a href="https://blog.r-project.org/2022/07/25/r-can-use-your-help-translating-r-messages/index.html">blog post</a></li>
+<li><a href="https://daroczig.github.io/slides/2022-06-22-useR_2022_poster-Gergely_Daroczi-Internationalization_of_R_packages_with_r18r.pdf">useR! 2022 Poster</a></li>
 </ul>
 </div>
 </div>
@@ -616,10 +818,8 @@ Heather Turner and Ella Kaye
           display:block!important;
       }</style></aside>
 </section>
-<section id="related-project-translation-dashboard" class="slide level2">
-<h2>Related project: Translation Dashboard</h2>
-<p><a href="https://contributor.r-project.org/translations" class="uri">https://contributor.r-project.org/translations</a></p>
-<p><img data-src="images/translation_dashboard.png" alt="Screenshot of top of R Translations Status Dashboard"> ## Event: Translatón/hackaton</p>
+<section id="translatónhackaton" class="slide level2">
+<h2>Translatón/hackaton</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><img data-src="images/translaton.png"></p>
@@ -629,22 +829,60 @@ Heather Turner and Ella Kaye
 <li>10 participants ~500 translations</li>
 <li>Brazilian-Portuguese and Spanish</li>
 <li>Connect people with experience in translation to first-timers</li>
-<li>Plan for similar AsiaR hackathon</li>
 </ul>
 </div>
 </div>
 </section>
 <section id="translations-patch" class="slide level2">
 <h2>Translations patch</h2>
+<p>First patch from Weblate to base R: ~3500 strings, 8 languages</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1"></a><span class="ex">R-devel</span> % svn log <span class="at">-r</span> 83710</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="ex">------------------------------------------------------------------------</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="ex">r83710</span> <span class="kw">|</span> <span class="ex">lawrence</span> <span class="kw">|</span> <span class="ex">2023-01-27</span> 18:28:40 +0000 <span class="er">(</span><span class="ex">Fri,</span> 27 Jan 2023<span class="kw">)</span> <span class="kw">|</span> <span class="ex">33</span> lines</span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="ex">Cherry-pick</span> translations from weblate <span class="er">(</span><span class="ex">2022</span> Q2-Q3<span class="kw">)</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="ex">Thanks</span> to Gergely Daróczi for his leadership of the team, and for</span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="ex">producing</span> this patch.</span>
+<span id="cb1-9"><a href="#cb1-9"></a></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="ex">Translator</span> credits:</span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="ex">*</span> Portuguese <span class="er">(</span><span class="ex">Brazil</span><span class="kw">)</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>    <span class="ex">*</span> Gabriel Tormin <span class="op">&lt;</span>gta1998@gmail.com<span class="op">&gt;</span> <span class="er">(</span><span class="ex">24</span><span class="kw">)</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a>    <span class="ex">*</span> Beatriz Milz <span class="op">&lt;</span>milz.bea@gmail.com<span class="op">&gt;</span> <span class="er">(</span><span class="ex">65</span><span class="kw">)</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a>    <span class="ex">*</span> Caio Lente <span class="op">&lt;</span>lente@ime.usp.br<span class="op">&gt;</span> <span class="er">(</span><span class="ex">1139</span><span class="kw">)</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="ex">*</span> Chinese <span class="er">(</span><span class="ex">Simplified</span><span class="kw">)</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a>    <span class="ex">*</span> Shun Wang <span class="op">&lt;</span>shuonwang@gmail.com<span class="op">&gt;</span> <span class="er">(</span><span class="ex">1516</span><span class="kw">)</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="ex">*</span> English <span class="er">(</span><span class="ex">United</span> Kingdom<span class="kw">)</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a>    <span class="ex">*</span> Heather Turner <span class="op">&lt;</span>ht@heatherturner.net<span class="op">&gt;</span> <span class="er">(</span><span class="ex">114</span><span class="kw">)</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="ex">*</span> French</span>
+<span id="cb1-21"><a href="#cb1-21"></a>    <span class="ex">*</span> Marcel Ramos <span class="op">&lt;</span>marcel.ramos@sph.cuny.edu<span class="op">&gt;</span> <span class="er">(</span><span class="ex">71</span><span class="kw">)</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="ex">*</span> Albanian</span>
+<span id="cb1-23"><a href="#cb1-23"></a>    <span class="ex">*</span> Krye Kuzhinieri <span class="op">&lt;</span>sundley.12345@gmail.com<span class="op">&gt;</span> <span class="er">(</span><span class="ex">80</span><span class="kw">)</span></span>
+<span id="cb1-24"><a href="#cb1-24"></a><span class="ex">*</span> Spanish</span>
+<span id="cb1-25"><a href="#cb1-25"></a>    <span class="ex">*</span> Gaby Sandoval <span class="op">&lt;</span>fgsandoval33@gmail.com<span class="op">&gt;</span> <span class="er">(</span><span class="ex">16</span><span class="kw">)</span></span>
+<span id="cb1-26"><a href="#cb1-26"></a>    <span class="ex">*</span> Richard Detomasi <span class="op">&lt;</span>richard.detomasi@gmail.com<span class="op">&gt;</span> <span class="er">(</span><span class="ex">19</span><span class="kw">)</span></span>
+<span id="cb1-27"><a href="#cb1-27"></a>    <span class="ex">*</span> Lluís <span class="op">&lt;</span>lluis.revilla+weblate@gmail.com<span class="op">&gt;</span> <span class="er">(</span><span class="ex">29</span><span class="kw">)</span></span>
+<span id="cb1-28"><a href="#cb1-28"></a>    <span class="ex">*</span> Patricia loto <span class="op">&lt;</span>patricia.andrea.loto@gmail.com<span class="op">&gt;</span> <span class="er">(</span><span class="ex">55</span><span class="kw">)</span></span>
+<span id="cb1-29"><a href="#cb1-29"></a>    <span class="ex">*</span> Julieta Laurino <span class="op">&lt;</span>julilaurino@gmail.com<span class="op">&gt;</span> <span class="er">(</span><span class="ex">61</span><span class="kw">)</span></span>
+<span id="cb1-30"><a href="#cb1-30"></a>    <span class="ex">*</span> Angela Sanzo <span class="op">&lt;</span>angelasanzomachuca@gmail.com<span class="op">&gt;</span> <span class="er">(</span><span class="ex">102</span><span class="kw">)</span></span>
+<span id="cb1-31"><a href="#cb1-31"></a>    <span class="ex">*</span> Macarena Quiroga <span class="op">&lt;</span>macarenasolquiroga@gmail.com<span class="op">&gt;</span> <span class="er">(</span><span class="ex">156</span><span class="kw">)</span></span>
+<span id="cb1-32"><a href="#cb1-32"></a><span class="ex">*</span> Korean</span>
+<span id="cb1-33"><a href="#cb1-33"></a>    <span class="ex">*</span> joygram <span class="op">&lt;</span>joygram@gmail.com<span class="op">&gt;</span> <span class="er">(</span><span class="ex">2</span><span class="kw">)</span></span>
+<span id="cb1-34"><a href="#cb1-34"></a>    <span class="ex">*</span> Kwangchun Lee <span class="op">&lt;</span>kwangchun.lee.7@gmail.com<span class="op">&gt;</span> <span class="er">(</span><span class="ex">15</span><span class="kw">)</span></span>
+<span id="cb1-35"><a href="#cb1-35"></a><span class="ex">*</span> Italian</span>
+<span id="cb1-36"><a href="#cb1-36"></a>    <span class="ex">*</span> Marcel Ramos <span class="op">&lt;</span>marcel.ramos@sph.cuny.edu<span class="op">&gt;</span> <span class="er">(</span><span class="ex">22</span><span class="kw">)</span></span>
+<span id="cb1-37"><a href="#cb1-37"></a></span>
+<span id="cb1-38"><a href="#cb1-38"></a><span class="ex">------------------------------------------------------------------------</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="translations-dashboard" class="slide level2">
-<h2>Translations dashboard</h2>
+<section id="gsod-2022-r-dev-guide-improvements" class="slide level2">
+<h2>GSoD 2022: R Dev Guide Improvements</h2>
 <ul>
-<li><a href="https://github.com/rstats-gsoc/gsoc2023/wiki/Track%20R%20Translation%20Status">Track R translation status</a></li>
+<li>Improve content added on voluntary basis, e.g.&nbsp;chapter on R Documentation</li>
+<li>Add chapter on translations infrastructure (not yet Weblate)</li>
+<li>Add instructions on building from source (Linux, Windows)</li>
+<li>Document testing patches on <a href="https://github.com/r-devel/r-svn">r-svn GitHub mirror</a></li>
 </ul>
-</section>
-<section id="r-dev-guide-improvementsgsod" class="slide level2">
-<h2>R Dev Guide Improvements/GSoD</h2>
 </section>
 <section id="r-contribution-office-hours" class="slide level2">
 <h2>R Contribution Office Hours</h2>
@@ -653,7 +891,8 @@ Heather Turner and Ella Kaye
 <p><img data-src="images/office-hours.png"></p>
 </div><div class="column" style="width:60%;">
 <ul>
-<li>Monthly, 2nd Thursday (next two are May 11th, June 8th)</li>
+<li>Started November 2022</li>
+<li>Monthly, 2nd Thursday</li>
 <li>Two time-zones (10am and 5:30pm UTC)</li>
 <li>Informal opportunity to work on any aspect of contributing to R</li>
 <li>Has led to <a href="https://bugs.r-project.org/show_bug.cgi?id=16158">bug fixes</a></li>
@@ -661,17 +900,117 @@ Heather Turner and Ella Kaye
 </div>
 </div>
 </section>
-<section id="r-project-sprint-2023-preparation" class="slide level2">
-<h2>R Project Sprint 2023: Preparation</h2>
+<section id="r-project-sprint-2023" class="slide level2">
+<h2>R Project Sprint 2023</h2>
+<p>The plan:</p>
+<blockquote>
+<p>This sprint will bring together novice and experienced contributors, to work alongside members of the R Core Team. Participants will work collaboratively on contributions to base R.</p>
+</blockquote>
+<p>University of Warwick, Aug 30–Sep 1 2023<br>
+<a href="https://contributor.r-project.org/r-project-sprint-2023/" class="uri">https://contributor.r-project.org/r-project-sprint-2023/</a></p>
+<p>Opportunity to self-nominate for a place.</p>
+</section>
+<section id="participants" class="slide level2">
+<h2>Participants</h2>
+<div class="columns">
+<div class="column" style="width:25%;">
+<p><br><br><br></p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">R Core</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">13</td>
+<td style="text-align: left;">Invited</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">31</td>
+<td style="text-align: left;">Selected</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:75%;">
+<p><img data-src="figures/participant_map.png"></p>
+</div>
+</div>
+<p>25/40 non core developers self-identified from underrepresented groups</p>
+<aside class="notes">
+<ul>
+<li>~80 applications. Participants chosen for balance of experience, diversity, community leaders</li>
+<li>Diverse communities: RLadies, AfricaR, AsiaR, ArabR, RainbowR</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="skills-coming-in" class="slide level2">
+<h2>Skills coming in</h2>
+<p>As assessed by the selection committee:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/contributor_level.png" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/translator_level.png" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Several have engaged with past RCWG events and initiatives (Collaboration Campires, Slack, Office Hours, useR! tutorials) but not all</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="preparation" class="slide level2">
+<h2>Preparation</h2>
+<ul>
+<li>Existing resources: R Blog posts, useR! tutorials, R Dev Guide, contributor office hours</li>
+<li>Debugging in R, Shannon Pileggi, R-Ladies Remote, 2hr tutorial</li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/179x00KGd9M" title="R-Ladies Remote (English) - Debugging in R - Shannon Pileggi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
 </section>
 <section id="c-book-club-for-r-contributors" class="slide level2">
 <h2>C book club for R contributors</h2>
+<p><a href="https://github.com/r-devel/c-book-club/" class="uri">https://github.com/r-devel/c-book-club/</a></p>
 <ul>
-<li>For existing/aspiring R contributors that want to learn/refresh their C programming skills.</li>
-<li>May 16th–Aug 22nd, online every two weeks, 1-2pm BST Tuesdays</li>
-<li>Main reading is <a href="https://gustedt.gitlabpages.inria.fr/modern-c/">Modern C</a> by Jens Gustedt, supplemented by selected exercises from <a href="http://knking.com/books/c2/">C Programming: A Modern Approach</a> by K. N. King.</li>
-<li>Commitment ~2hrs a week</li>
-<li><a href="https://github.com/r-devel/c-book-club/" class="uri">https://github.com/r-devel/c-book-club/</a></li>
+<li>For existing/aspiring R contributors wanting to learn/refresh their C programming skills.</li>
+<li>Every two weeks, two time zones</li>
+<li>Main reading: <a href="https://gustedt.gitlabpages.inria.fr/modern-c/">Modern C</a> by Jens Gustedt</li>
+<li>Exercises from <a href="http://knking.com/books/c2/">C Programming: A Modern Approach</a> by K. N. King.</li>
+<li>Slides available for chapters 1-13</li>
 </ul>
 <aside class="notes">
 <ul>
@@ -693,29 +1032,39 @@ Heather Turner and Ella Kaye
           display:block!important;
       }</style></aside>
 </section>
-<section id="r-dev-container" class="slide level2">
-<h2>R Dev container</h2>
+<section id="gsoc-2023-r-dev-container" class="slide level2">
+<h2>GSoC 2023: R Dev Container</h2>
+<p>Atharva Shirdhankar, supervised by Heather Turner and James Tripp <a href="https://github.com/r-devel/r-dev-env/" class="uri">https://github.com/r-devel/r-dev-env/</a></p>
 <ul>
-<li><a href="https://github.com/rstats-gsoc/gsoc2023/wiki/Containerized-Development-Environments-for-R">Containerized development environments for R</a></li>
+<li>GitHub Codespace:
+<ul>
+<li>Linux container set up to build R from source</li>
+<li>VS Code IDE for working with R and C files</li>
+</ul></li>
+<li>Documentation
+<ul>
+<li>README on GitHub repo</li>
+<li>Markdown included in container for copy-paste</li>
+</ul></li>
 </ul>
+</section></section>
+<section>
+<section id="r-project-sprint-2023-1" class="title-slide slide level1 inverse center">
+<h1>R Project Sprint 2023</h1>
+
 </section>
-<section id="event-r-project-sprint-2023" class="slide level2">
-<h2>Event: R Project Sprint 2023</h2>
-<ul>
-<li>Collaborate on contributions to base R</li>
-<li>~50 participants, range of experience</li>
-<li>A diverse group</li>
-<li>Several have engaged with past RCWG events and initiatives</li>
-<li>Taking place at The University of Warwick, Aug 30–Sept 1st 2023</li>
-<li><a href="https://contributor.r-project.org/r-project-sprint-2023/" class="uri">https://contributor.r-project.org/r-project-sprint-2023/</a></li>
-<li>Will report after the event</li>
-</ul>
-<aside class="notes">
-<ul>
-<li>~80 applications. Participants chosen for balance of experience, diversity, community leaders</li>
-<li>Diverse communities: RLadies, AfricaR, AsiaR, ArabR, RainbowR</li>
-<li>Participants have engaged with Collaboration Campfires, Slack, Office Hours (more on those in a moment)</li>
-</ul>
+<section id="participants-1" class="slide level2">
+<h2>Participants</h2>
+
+<img data-src="images/R-project-sprint.jpg" class="r-stretch"><p>(Not all pictured) 48 in person, 7 online.</p>
+</section>
+
+<section id="translating-r-messages" class="slide level2">
+<h2>Translating R messages</h2>
+<p>~2000 new/updated messages translations across 14 languages</p>
+
+<img data-src="figures/translations.png" style="width:90.0%" class="r-stretch quarto-figure-center"><aside class="notes">
+<p>~6500 messages in total across base packages + Windows &amp; Mac GUI Roughly (need to get actual data): Japanese and Chinese 80-90% translated already; Spanish 20% and Portuguese 50%</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -727,57 +1076,204 @@ Heather Turner and Ella Kaye
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section>
+<section id="translation-documentation" class="slide level2">
+<h2>Translation Documentation</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><a href="https://contributor.r-project.org/translations/"> <img src="images/translations_site.png"> </a></p>
+</div><div class="column" style="width:40%;">
+<ul>
+<li>New guidelines for translators: <a href="https://contributor.r-project.org/translations/" class="uri">https://contributor.r-project.org/translations/</a></li>
+<li>New <a href="https://contributor.r-project.org/rdevguide/message-translations.html#how-to-contribute-new-translations">How to contribute new translations</a> section in the R Dev Guide</li>
+<li>Language-specific guidelines and glossaries.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="weblate-administration" class="slide level2">
+<h2>Weblate administration</h2>
+<ul>
+<li>Enable new features
+<ul>
+<li>Translation memory</li>
+<li>Hyperlink source string location</li>
+<li>Dedicated reviewers (translations can be approved)</li>
+</ul></li>
+<li>Add new components for translation
+<ul>
+<li>Mac GUI strings</li>
+<li>Recommended packages</li>
+</ul></li>
+<li>Import Hungarian translations from 2011
+<ul>
+<li>10% coverage of base packages</li>
+</ul></li>
+</ul>
+</section>
+<section id="low-level-issues" class="slide level2">
+<h2>Low-level issues</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/bug_review_Low-level.png" width="528"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<ul>
+<li>New functionality, e.g.&nbsp;allow custom parallel backends</li>
+<li>Refactoring, e.g.&nbsp;optimize scaler RNG</li>
+<li>Improve behaviour, e.g.&nbsp;formating complex numbers</li>
+<li>Bug fixes, e.g.&nbsp;invalid tarballs w/ long usernames</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="documentation-bugs" class="slide level2">
+<h2>Documentation bugs</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/bug_review_Documentation.png" width="528"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<ul>
+<li>Triaged documentation bugs to find good issues</li>
+<li>Several closed bugs first reported in 2020</li>
+<li>Two proposed patches now accepted</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="package-related-issues" class="slide level2">
+<h2>Package-related issues</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/bug_review_Packages.png" width="528"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<p>Examples:</p>
+<ul>
+<li>Add support for defining vignette ordering</li>
+<li>Improve messages to CRAN maintainers</li>
+<li>Caching installed packages</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="package-related-issues-1" class="slide level2">
+<h2>Package-related issues</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figures/bug_review_Packages.png" width="528"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<p>Examples:</p>
+<ul>
+<li>Add support for defining vignette ordering</li>
+<li>Improve messages to CRAN maintainers</li>
+<li>Caching installed packages</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="graphics" class="slide level2">
+<h2>Graphics</h2>
+<ul>
+<li>1 closed issue:
+<ul>
+<li><a href="https://github.com/r-devel/r-project-sprint-2023/issues/74">Adding support for “#RGB” colours in R</a> (in addition to “#RRGGBB”)</li>
+</ul></li>
+<li>1 proposed patch:
+<ul>
+<li><a href="https://github.com/r-devel/r-project-sprint-2023/issues/43">Adding Alpha Masks to the Quartz Graphics Device</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="accessibility" class="slide level2">
+<h2>Accessibility</h2>
+<p>Two works in progress:</p>
+<ul>
+<li>Logging base graphics (<code>summary.recordedplot()</code>)
+<ul>
+<li>Enables screenreader users to get information on created graphics</li>
+</ul></li>
+<li>Logging R sessions (<code>ShowMe()</code>, <code>SessionLog()</code>, and <code>GrabLast()</code>)
+<ul>
+<li>Enables screenreader users to save both input and output created during an R session.</li>
+</ul></li>
+</ul>
+<p>Functions now available in <strong>BrailleR</strong> on CRAN.</p>
+</section>
+<section id="statistics" class="slide level2">
+<h2>Statistics</h2>
+<ul>
+<li>1 proposed patch (now accepted)
+<ul>
+<li><a href="https://bugs.r-project.org/show_bug.cgi?id=14359">Improve behaviour of t.test.formula and wilcox.test.formula for paired tests</a></li>
+</ul></li>
+<li>1 work in progress:
+<ul>
+<li>Improved algorithm for sampling with unequal probabilities</li>
+<li>Now in <a href="https://github.com/dickoa/sondage">package on GitHub</a> to enable testing and consideration by R Core</li>
+</ul></li>
+</ul>
 </section></section>
 <section>
-<section id="r-project-sprint" class="title-slide slide level1 inverse center">
-<h1>R Project Sprint</h1>
+<section id="what-next" class="title-slide slide level1 inverse center">
+<h1>What next?</h1>
 
 </section>
-<section id="activities" class="slide level2">
-<h2>Activities</h2>
-</section>
-<section id="outcomes" class="slide level2">
-<h2>Outcomes</h2>
-</section></section>
-<section id="where-next" class="title-slide slide level1 inverse center">
-<h1>Where next?</h1>
-
-</section>
-
-<section>
-<section id="get-involved" class="title-slide slide level1 inverse center">
-<h1>Get involved</h1>
-
-</section>
-<section id="slack-and-meetup" class="slide level2">
-<h2>Slack and Meetup</h2>
-<p><a href="https://contributor.r-project.org/slack" class="uri">https://contributor.r-project.org/slack</a></p>
-<p><a href="https://www.meetup.com/r-contributors/" class="uri">https://www.meetup.com/r-contributors/</a></p>
-<p>The Slack is a supportive space to foster the community of contributors to R core development:</p>
+<section id="r-contribution-working-group-1" class="slide level2">
+<h2>R Contribution Working Group</h2>
 <ul>
-<li>Potential/novice contributors wanting support to get started/develop as contributors.</li>
-<li>Experienced contributors and members of R Core willing to provide ad-hoc support.</li>
-<li>Community organizers wanting to connect their communities with this initiative.</li>
-</ul>
-<aside class="notes">
+<li>Continue work in progress</li>
+<li>More events
 <ul>
-<li>It is a space to discuss coding issues, the wider development process and outreach initiatives.</li>
-<li>Link gives more info about the group and how to join</li>
-<li>Includes posting guide and CoC</li>
-<li>Keeping up-to-date about events</li>
-<li>Lead in to next slide about R Contribution Office Hours</li>
+<li>Latin 2023 translation space</li>
+<li>useR! 2024 tutorials, Dev Day (TBC)</li>
+</ul></li>
+<li>Enagage others</li>
 </ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</section>
+<section id="you" class="slide level2">
+<h2>You?</h2>
+<ul>
+<li>Slack: <a href="https://contributor.r-project.org/slack" class="uri">https://contributor.r-project.org/slack</a></li>
+<li>Meetup: <a href="https://www.meetup.com/r-contributors/" class="uri">https://www.meetup.com/r-contributors/</a></li>
+<li>Translation: <a href="https://contributor.r-project.org/translation" class="uri">https://contributor.r-project.org/translation</a></li>
+<li>Documentation: <a href="https://github.com/r-devel/r-project-sprint-2023/issues/38#issuecomment-1702731310">overview of open bugs</a></li>
+<li>R bugs/wishlist items:
+<ul>
+<li>Browse <a href="https://bugs.r-project.org/">R’s Bugzilla</a>, see quick start on <a href="https://contributor.r-project.org/" class="uri">https://contributor.r-project.org/</a></li>
+<li>Attend Office Hour</li>
+</ul></li>
+</ul>
 </section></section>
 <section id="httpscontributor.r-project.org" class="title-slide slide level1 inverse larger150 center">
 <h1><a href="https://contributor.r-project.org" class="uri">https://contributor.r-project.org</a></h1>

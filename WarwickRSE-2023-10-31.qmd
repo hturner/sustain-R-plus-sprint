@@ -1,0 +1,142 @@
+---
+title: R Project Sprint 2023
+author: 
+  - name: Heather Turner and Ella Kaye
+    affiliation: University of Warwick
+date: 2023-10-31
+date-format: long
+format: 
+  warwickpres-revealjs: default
+---
+
+
+## R Project Sprint 2023
+
+University of Warwick, Aug 30--Sept 1st 2023
+
+![](images/R-project-sprint.jpg)
+
+48 in person (not all pictured), 7 online.
+
+## Who came?
+
+:::: {.columns}
+
+::: {.column width="25%"}
+
+<br><br><br>
+
+---- ---------
+  11 R Core
+  13 Invited
+  31 Selected
+---- ---------
+:::
+
+::: {.column width="75%"}
+![](figures/participant_map.png)
+:::
+
+::::
+
+25/40 non core developers self-identified from underrepresented groups
+
+## Skills coming in
+
+As assessed by the selection committee
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r, out.width = "90%"}
+#| echo: false
+#| eval: true
+#| fig-align: "center"
+knitr::include_graphics('figures/contributor_level.png')
+```
+:::
+
+::: {.column width="50%"}
+```{r, out.width = "90%"}
+#| echo: false
+#| fig-align: "center"
+knitr::include_graphics('figures/translator_level.png')
+```
+:::
+
+::::
+
+## Activities
+
+* **Translation**: Weblate server admin, documentation, message translation
+* **Documentation**: triaging and working on bug reports
+* **Bug fixes/new functionality**:
+    * **Accessibility**, e.g. logging base graphics
+    * **Low-level**, e.g. rng overhead optimization 
+    * **Packages**, e.g. improving messages sent to CRAN maintainers
+    * **Statistics**, e.g. enhancing sample.int for unequal probability sampling
+    * **Graphics**, see later!
+
+## Translation
+
+* ~2000 new/updated messages translations across 14 languages
+* New components for translation added to Weblate
+* New guidelines for translators
+
+## Bugs
+
+```{r, out.width = "90%"}
+#| echo: false
+#| eval: true
+#| fig-align: "center"
+knitr::include_graphics('figures/bug_review.png')
+```
+
+# Case study: 3-colour hex enhancement {.inverse}
+
+## Backgound
+
+The idea: <https://fosstodon.org/@coolbutuseless/110972696890598490>
+
+The discussion: <https://github.com/r-devel/r-project-sprint-2023/discussions/73>
+
+The issue: <https://github.com/r-devel/r-project-sprint-2023/issues/74>
+
+The dev container: <https://github.com/r-devel/r-dev-env>
+
+## Result
+
+The commit: <https://github.com/wch/r-source/commit/0cad8c3fa75f402db464cbfde93284106a12a69f>
+ - Note the number of files that needed changing, even for something so simple.
+
+(The main fix: <https://github.com/wch/r-source/blob/0cad8c3fa75f402db464cbfde93284106a12a69f/src/library/grDevices/src/colors.c#L1349>)
+
+The announcement: <https://fosstodon.org/@R_devs_news/110994148164062699> <https://developer.r-project.org/blosxom.cgi/R-devel/NEWS/2023/09/01#n2023-09-01>
+
+# {#sponsors-id data-menu-title="Sponsor acknowledgement"}
+
+:::{.center-h}
+[![](images/EPSRC_logo.png){fig-alt="Engineering and Physical Sciences Council logo" width="400"}](https://www.ukri.org/councils/epsrc/)
+<br><br>
+[The R Foundation](https://www.r-project.org/foundation/) <br><br>
+:::
+
+::: columns
+::: {.column width="33%"}
+[![](images/rconsortium_logo.png){fig-alt="R Consortium logo" fig-align="center" width="280"}](https://www.r-consortium.org/) <br><br><br>
+
+[![](images/eth_logo.png){fig-alt="ETH Zurich logo" fig-align="center" width="180"}](https://math.ethz.ch/sfs)
+:::
+
+::: {.column width="33%"}
+[![](images/crism_logo.png){fig-alt="Centre for Research in Statistical Methodology logo" fig-align="center" width="280"}](https://warwick.ac.uk/fac/sci/statistics/crism/)
+
+[![](images/rxstudio_logo.png){fig-alt="Rx Studio logo" fig-align="center" width="180"}](https://rx.studio)
+:::
+
+::: {.column width="33%"}
+[![](images/posit_logo.png){fig-alt="Posit logo" fig-align="center" width="280"}](https://posit.co/) <br><br>
+
+[![](images/pcctc_logo.jpg){fig-alt="PCCTC logo" fig-align="center" height="150"}](https://pcctc.org)
+:::
+:::

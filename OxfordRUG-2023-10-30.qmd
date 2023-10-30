@@ -59,13 +59,25 @@ twitter: [@R_contributors](https://twitter.com/R_Contributors)
 
 ::::
 
+## The R Project
+
+A little history:
+
+* 1992: Robert Gentleman and Ross Ihaka (NZ) develop early version of R
+* 1995: Martin Mächler (CH) persuades them to release R under GNU GPL
+* 1997: R Core team established, initially 8 members
+
+The Core Team maintain the core codebase and set of base R packages.
+
+The R Project is a little wider, includes CRAN.
+
 ## Sustainability
 
 Those who contributed the most to R early on are now near the end of their careers, only partially replaced by new contributors.
 
 ```{r}
 #| fig.align: center
-knitr::include_graphics(here::here("figures", "r_core_commits.png"))
+knitr::include_graphics("figures/r_core_commits.png")
 ```
 
 
@@ -105,25 +117,19 @@ knitr::include_graphics('figures/location.png')
 [Data source: Pinto et al. 2018, DOI: [10.1109/SANER.2018.8330263](https://ieeexplore.ieee.org/document/8330263)]{.smaller70}
 
 
-## Benefits of a diverse community
+## Why worry about diversity?
 
-- Increasing innovation
+- Developer community should represent the user community
 - Increasing sustainability
+- Increasing innovation
 - Decreased duplication of effort as people work together
-
-. . . 
-
-:::{.callout-note}
-## Personal reflection
-- A diverse, welcoming community is pleasurable to be involved in (as opposed to off-putting) 
-- Motivates a desire to contribute.
-:::
+- More welcoming community: motivates contribution
 
 ## R Contribution Working Group
 
-Established July 2020
+Established July 2020 as collaboration between R Core and community groups
 
-- Social media (Slack, Twitter, Mastodon)
+- Social media
 - Novice-friendly documentation
 - Short-term paid projects (GSoC, GSoD)
 - Events for novice contributors
@@ -136,24 +142,36 @@ Established July 2020
 
 ## Slack
 
+<https://contributor.r-project.org/slack>
+
+Supportive space to foster the community of R contributors
+
+- Potential/novice contributors wanting support to get started/develop as contributors.
+- Experienced contributors and members of R Core willing to provide ad-hoc support.
+- Community organizers wanting to connect their communities with this initiative.
+
+::: {.notes}
+- It is a space to discuss coding issues, the wider development process and outreach initiatives.
+- Link gives more info about the group and how to join
+- Includes posting guide and CoC
+:::
+
 ## R Development Guide
 
+R Foundation funded 12 week project. Saranjeet Kaur Bhogal (technical writer), Heather Turner and Michael Lawrence (supervisors).  
 <https://contributor.r-project.org/rdevguide/>
 
 :::: {.columns}
 
 ::: {.column width="60%"}
-![](figures/r_dev_guide.png)
+![](images/r_dev_guide.png)
 :::
 
 ::: {.column width="40%"}
-
-
 * Novice-friendly
-* Initial focus on established workflows for bugs & translations
-* Recent/ongoing:
-    - Further topics
-    - Alternative workflows
+* Installing R-devel on Windows
+* Bug Tracking
+* Bug Review ([R Can Use Your Help: Reviewing Bug Reports](https://blog.r-project.org/2019/10/09/r-can-use-your-help-reviewing-bug-reports/))
 :::
 
 ::::
@@ -164,17 +182,85 @@ If we want people to contribute, good to have infrastructure in place to guide t
 
 ## useR! 2021 tutorials
 
-# {.inverse .center-h .middle}
+:::: {.columns}
 
-[**EPSRC RSE Fellowship**]{.larger200}
+::: {.column width="50%"}
+
+[Contributing to R](https://contributor.r-project.org/tutorials/contributing-to-r), Gabriel Becker and Martin Maechler, useR! 2021. 2h15 video (or 1h30 abridged).
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/CZmldTOdlRM" title="Contributing to R" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+:::
+
+::: {.column width="50%"}
+
+[Translating R to your Language](https://contributor.r-project.org/tutorials/translating-r-to-your-language/), Michael Chirico and Michael Lawrence, useR! 2021. 1h30 video. 
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/S3Qhqf9u6ao" title="Translating R to your language" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+
+:::
+
+::::
+
+Follow the links for further detail, with slides and exercises.
+
+# EPSRC RSE Fellowship {.inverse}
+
+:::: {.columns}
+
+::: {.column width="35%"}
+
+```{r}
+#| echo: false
+#| fig-align: "center"
+knitr::include_graphics('images/heather_turner.jpg')
+```
+
+:::
+
+::: {.column width="65%"}
+::: {.center}
+"Sustainability & EDI in the R Project"
+:::
+
+💻 Contributing to the R project through code, infrastructure & outreach.  
+📦 Contributing to packages on CRAN.  
+🚀 Capacity-building in R and data science at Warwick University.  
+💪 Community-building in the R and RSE communities with a focus on EDI.
+:::
+
+::::
 
 # Gearing up {.inverse}
 
 ## Improved communications
 
-website, twitter
+<contributor.r-project.org>
 
-## Event: Collaboration Campfires
+:::: {.columns}
+
+::: {.column width="60%"}
+<a href="https://contributor.r-project.org/">
+  <img src="images/R_Contributor_Site.png">
+</a>
+:::
+
+::: {.column width="40%"}
+* Improved website on R-project.org domain
+    * Joining page for Slack
+    * Links to R Dev Guide and useR! tutorials
+    * Event calendar
+* New Twitter account: [@_R_Contributors](https://twitter.com/R_Contributors)
+:::
+
+::::
+
+## Collaboration Campfires
+
+[Code for Science & Society Digital Infrastructure Incubator project](https://www.codeforsociety.org/incubator/projects/building-community-around-the-r-development-guide)
+with Saranjeet Kaur Bhogal
 
 :::: {.columns}
 
@@ -191,18 +277,29 @@ website, twitter
 
 ::::
 
+:::{.notes}
+TODO: How many people came?
+:::
+
 ## Campfire Topic: Bug Handling
 
 <https://bugs.r-project.org>
 
+:::: {.columns}
+
+::: {.column width="40%"}
 - Exploring R's Bugzilla
 - Reviewing bugs
+:::
 
+::: {.column width="60%"}
 ```{r}
 #| echo: false
 #| fig-align: "center"
 knitr::include_graphics('figures/bug_status.png')
 ```
+:::
+::::
 
 ::: {.notes}
 lots unconfirmed - confirming they are really bugs is something that novice contributors can do  
@@ -210,23 +307,31 @@ lots unconfirmed - confirming they are really bugs is something that novice cont
 
 ## Campfire Topic: Localisation/translation
 
-- Exploring status of translations
-- Contributing translations
+:::: {.columns}
 
+::: {.column width="60%"}
 ```{r}
 #| fig-align: "center"
 #| eval: true
 knitr::include_graphics("figures/translation_status.png")
 ```
+:::
+
+::: {.column width="40%"}
+- Exploring status of translations
+- Introduction to translation infrastructure
+- [Post on R Blog](https://blog.r-project.org/2022/07/25/r-can-use-your-help-translating-r-messages/index.html)
+:::
+
+::::
 
 ::: {.notes}
 translations of messages
 Spanish is an interesting case, given large Spanish-speaking userbase
 :::
 
-## Event: Bug BBQ
+## Bug BBQ (useR! 2022)
 
-:::: {.columns}
 
 ::: {.column width="60%"}
 - Global, online, 24-hour event to work on open bugs.
@@ -245,27 +350,68 @@ Spanish is an interesting case, given large Spanish-speaking userbase
 
 ::::
 
-# {.inverse .center-h .middle}
+# Ella Kaye Joins The Team! {.inverse}
 
-[**EK joins the team!**]{.larger200}
+:::: {.columns}
+
+::: {.column width="35%"}
+
+```{r}
+#| echo: false
+#| fig-align: "center"
+knitr::include_graphics('images/ella_profile.jpg')
+```
+
+:::
+
+::: {.column width="65%"}
+Particular focus:
+
+* R training at Warwick
+* Community outreach (RainbowR)
+* General engagement with R Contributor activities
+
+⛰️ More capacity for bigger challenges!
+:::
+
+::::
 
 # Heading for the sprint {.inverse}
 
-## Infrastructure: Weblate
+## GSoC 2022 project: Translation Dashboard
 
+Supervised by Ben Ubah and Mike Chirico  
+[Track R Translations Status](https://github.com/rstats-gsoc/gsoc2022/wiki/Track-R-Translations-Status)
+
+```{r, out.width = "90%"}
+#| echo: false
+#| eval: true
+#| fig-align: "center"
+#| fig-alt: "Screenshot of top of R Translations Status Dashboard"
+knitr::include_graphics('images/translation_dashboard.png')
+```
+
+
+## Weblate interface
+
+Set up summer 2022 by Gergely Daróczi  
 <https://translate.rx.studio>
 
 :::: {.columns}
 
-::: {.column width="50%"}
-![Screenshot from Weblate](images/weblate.png)
+::: {.column width="60%"}
+```{r, out.width = "90%"}
+#| echo: false
+#| eval: true
+#| fig-align: "center"
+#| fig-alt: "Screenshot from Weblate"
+knitr::include_graphics('images/weblate.png')
+```
 :::
 
-::: {.column width="50%"}
-- Set up summer 2022 by Gergely Daróczi
+::: {.column width="40%"}
 - Web interface makes it easy to work on translations for R
-- [Incorporated into base R](https://github.com/r-devel/r-svn/commit/dd4ed6ffc9b620c7b4a92f8cb9dab9ecc8b5890c)
-- [Poster](https://daroczig.github.io/slides/2022-06-22-useR_2022_poster-Gergely_Daroczi-Internationalization_of_R_packages_with_r18r.pdf), [blog post](https://blog.r-project.org/2022/07/25/r-can-use-your-help-translating-r-messages/index.html)
+- [useR! 2022 Poster](https://daroczig.github.io/slides/2022-06-22-useR_2022_poster-Gergely_Daroczi-Internationalization_of_R_packages_with_r18r.pdf)
 :::
 
 ::::
@@ -275,12 +421,7 @@ Really easy to sign up for an account and translate a few messages, can be done 
 Great way to get started with contributing if you speak another language (or UK English)
 :::
 
-## Related project: Translation Dashboard
-
-<https://contributor.r-project.org/translations>
-
-![Screenshot of top of R Translations Status Dashboard](images/translation_dashboard.png)
-## Event: Translatón/hackaton
+## Translatón/hackaton
 
 :::: {.columns}
 
@@ -293,7 +434,6 @@ Great way to get started with contributing if you speak another language (or UK 
 - 10 participants ~500 translations
 - Brazilian-Portuguese and Spanish
 - Connect people with experience in translation to first-timers
-- Plan for similar AsiaR hackathon
 
 :::
 
@@ -301,11 +441,56 @@ Great way to get started with contributing if you speak another language (or UK 
 
 ## Translations patch
 
-## Translations dashboard
+First patch from Weblate to base R: ~3500 strings, 8 languages
 
-- [Track R translation status](https://github.com/rstats-gsoc/gsoc2023/wiki/Track%20R%20Translation%20Status)
+```sh
+R-devel % svn log -r 83710
+------------------------------------------------------------------------
+r83710 | lawrence | 2023-01-27 18:28:40 +0000 (Fri, 27 Jan 2023) | 33 lines
 
-## R Dev Guide Improvements/GSoD
+Cherry-pick translations from weblate (2022 Q2-Q3)
+
+Thanks to Gergely Daróczi for his leadership of the team, and for
+producing this patch.
+
+Translator credits:
+
+* Portuguese (Brazil)
+    * Gabriel Tormin <gta1998@gmail.com> (24)
+    * Beatriz Milz <milz.bea@gmail.com> (65)
+    * Caio Lente <lente@ime.usp.br> (1139)
+* Chinese (Simplified)
+    * Shun Wang <shuonwang@gmail.com> (1516)
+* English (United Kingdom)
+    * Heather Turner <ht@heatherturner.net> (114)
+* French
+    * Marcel Ramos <marcel.ramos@sph.cuny.edu> (71)
+* Albanian
+    * Krye Kuzhinieri <sundley.12345@gmail.com> (80)
+* Spanish
+    * Gaby Sandoval <fgsandoval33@gmail.com> (16)
+    * Richard Detomasi <richard.detomasi@gmail.com> (19)
+    * Lluís <lluis.revilla+weblate@gmail.com> (29)
+    * Patricia loto <patricia.andrea.loto@gmail.com> (55)
+    * Julieta Laurino <julilaurino@gmail.com> (61)
+    * Angela Sanzo <angelasanzomachuca@gmail.com> (102)
+    * Macarena Quiroga <macarenasolquiroga@gmail.com> (156)
+* Korean
+    * joygram <joygram@gmail.com> (2)
+    * Kwangchun Lee <kwangchun.lee.7@gmail.com> (15)
+* Italian
+    * Marcel Ramos <marcel.ramos@sph.cuny.edu> (22)
+
+------------------------------------------------------------------------
+```
+
+## GSoD 2022: R Dev Guide Improvements
+
+* Improve content added on voluntary basis, e.g. chapter on R Documentation
+* Add chapter on translations infrastructure (not yet Weblate)
+* Add instructions on building from source (Linux, Windows)
+* Document testing patches on [r-svn GitHub mirror](https://github.com/r-devel/r-svn)
+
 
 ## R Contribution Office Hours
 
@@ -316,7 +501,8 @@ Great way to get started with contributing if you speak another language (or UK 
 :::
 
 ::: {.column width="60%"}
-- Monthly, 2nd Thursday (next two are May 11th, June 8th)
+- Started November 2022
+- Monthly, 2nd Thursday
 - Two time-zones (10am and 5:30pm UTC)
 - Informal opportunity to work on any aspect of contributing to R
 - Has led to [bug fixes](https://bugs.r-project.org/show_bug.cgi?id=16158)
@@ -324,15 +510,90 @@ Great way to get started with contributing if you speak another language (or UK 
 
 ::::
 
-## R Project Sprint 2023: Preparation
+## R Project Sprint 2023
+
+The plan:
+
+> This sprint will bring together novice and experienced contributors, to work alongside members of the R Core Team. Participants will work collaboratively on contributions to base R.
+
+University of Warwick, Aug 30--Sep 1 2023  
+<https://contributor.r-project.org/r-project-sprint-2023/>
+
+Opportunity to self-nominate for a place.
+
+## Participants
+
+:::: {.columns}
+
+::: {.column width="25%"}
+
+<br><br><br>
+
+---- ---------
+  11 R Core
+  13 Invited
+  31 Selected
+---- ---------
+:::
+
+::: {.column width="75%"}
+![](figures/participant_map.png)
+:::
+
+::::
+
+25/40 non core developers self-identified from underrepresented groups
+
+:::{.notes}
+- ~80 applications. Participants chosen for balance of experience, diversity, community leaders
+- Diverse communities: RLadies, AfricaR, AsiaR, ArabR, RainbowR
+:::
+
+## Skills coming in
+
+As assessed by the selection committee:
+
+:::: {.columns}
+
+::: {.column width="50%"}
+```{r, out.width = "90%"}
+#| echo: false
+#| eval: true
+#| fig-align: "center"
+knitr::include_graphics('figures/contributor_level.png')
+```
+:::
+
+::: {.column width="50%"}
+```{r, out.width = "90%"}
+#| echo: false
+#| fig-align: "center"
+knitr::include_graphics('figures/translator_level.png')
+```
+:::
+
+::::
+
+:::{.notes}
+Several have engaged with past RCWG events and initiatives (Collaboration Campires, Slack, Office Hours, useR! tutorials) but not all
+:::
+
+## Preparation
+
+* Existing resources: R Blog posts, useR! tutorials, R Dev Guide, contributor office hours
+* Debugging in R, Shannon Pileggi, R-Ladies Remote, 2hr tutorial 
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/179x00KGd9M" title="R-Ladies Remote (English) - Debugging in R - Shannon Pileggi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## C book club for R contributors 
 
-- For existing/aspiring R contributors that want to learn/refresh their C programming skills.
-- May 16th--Aug 22nd, online every two weeks, 1-2pm BST Tuesdays
-- Main reading is [Modern C](https://gustedt.gitlabpages.inria.fr/modern-c/) by Jens Gustedt, supplemented by selected exercises from [C Programming: A Modern Approach](http://knking.com/books/c2/) by K. N. King.
-- Commitment ~2hrs a week
-- <https://github.com/r-devel/c-book-club/>
+<https://github.com/r-devel/c-book-club/>
+
+- For existing/aspiring R contributors wanting to learn/refresh their C programming skills.
+- Every two weeks, two time zones
+- Main reading: [Modern C](https://gustedt.gitlabpages.inria.fr/modern-c/) by Jens Gustedt
+- Exercises from [C Programming: A Modern Approach](http://knking.com/books/c2/) by K. N. King.
+- Slides available for chapters 1-13
 
 ::: {.notes}
 - Much of R is written in C
@@ -342,58 +603,217 @@ Great way to get started with contributing if you speak another language (or UK 
 - Possibly a second cohort 7-8pm PDT (3am BST!)
 :::
 
-## R Dev container
+## GSoC 2023: R Dev Container
 
-- [Containerized development environments for R](https://github.com/rstats-gsoc/gsoc2023/wiki/Containerized-Development-Environments-for-R)
+Atharva Shirdhankar, supervised by Heather Turner and James Tripp
+<https://github.com/r-devel/r-dev-env/>
+
+- GitHub Codespace: 
+   - Linux container set up to build R from source
+   - VS Code IDE for working with R and C files
+- Documentation
+   - README on GitHub repo
+   - Markdown included in container for copy-paste
+
+# R Project Sprint 2023 {.inverse}
+
+## Participants
+
+![](images/R-project-sprint.jpg)
+
+(Not all pictured) 48 in person, 7 online.
 
 
-## Event: R Project Sprint 2023
 
-- Collaborate on contributions to base R
-- ~50 participants, range of experience
-- A diverse group
-- Several have engaged with past RCWG events and initiatives
-- Taking place at The University of Warwick, Aug 30--Sept 1st 2023
-- <https://contributor.r-project.org/r-project-sprint-2023/>
-- Will report after the event
+## Translation: Goals {visibility="hidden"}
 
-::: {.notes}
-- ~80 applications. Participants chosen for balance of experience, diversity, community leaders
-- Diverse communities: RLadies, AfricaR, AsiaR, ArabR, RainbowR
-- Participants have engaged with Collaboration Campfires, Slack, Office Hours (more on those in a moment)
-:::
+1. Translating R messages 
+    * Target languages: Arabic, Brazilian Portuguese, Hindi, Japanese, Spanish
+2. Documentation to support translation through Weblate
+3. Improvements to Weblate instance
 
+## Translating R messages
 
-# R Project Sprint {.inverse}
+~2000 new/updated messages translations across 14 languages
 
-## Activities
-
-## Outcomes
-
-# Where next? {.inverse}
-
-# Get involved {.inverse}
-
-## Slack and Meetup
-
-<https://contributor.r-project.org/slack>
-
-<https://www.meetup.com/r-contributors/>
-
-The Slack is a supportive space to foster the community of contributors to R core development:
-
-- Potential/novice contributors wanting support to get started/develop as contributors.
-- Experienced contributors and members of R Core willing to provide ad-hoc support.
-- Community organizers wanting to connect their communities with this initiative.
+```{r, out.width = "90%"}
+#| echo: false
+#| fig-align: "center"
+knitr::include_graphics('figures/translations.png')
+```
 
 ::: {.notes}
-- It is a space to discuss coding issues, the wider development process and outreach initiatives.
-- Link gives more info about the group and how to join
-- Includes posting guide and CoC
-- Keeping up-to-date about events
-- Lead in to next slide about R Contribution Office Hours
+~6500 messages in total across base packages + Windows & Mac GUI
+Roughly (need to get actual data): Japanese and Chinese 80-90% translated already; Spanish 20% and Portuguese 50%
 :::
 
+## Translation Documentation
+
+:::: {.columns}
+
+::: {.column width="60%"}
+<a href="https://contributor.r-project.org/translations/">
+  <img src="images/translations_site.png">
+</a>
+:::
+
+::: {.column width="40%"}
+
+
+* New guidelines for translators: <https://contributor.r-project.org/translations/>
+* New [How to contribute new translations](https://contributor.r-project.org/rdevguide/message-translations.html#how-to-contribute-new-translations) section in the R Dev Guide
+* Language-specific guidelines and glossaries.
+:::
+
+::::
+
+## Weblate administration
+
+* Enable new features
+    * Translation memory
+    * Hyperlink source string location
+    * Dedicated reviewers (translations can be approved)
+* Add new components for translation
+    * Mac GUI strings
+    * Recommended packages
+* Import Hungarian translations from 2011 
+    * 10% coverage of base packages
+
+## Low-level issues
+
+:::: {.columns}
+
+::: {.column width="60%"}
+```{r}
+#| fig.align: center
+knitr::include_graphics("figures/bug_review_Low-level.png")
+```
+:::
+
+::: {.column width="40%"}
+
+
+* New functionality, e.g. allow custom parallel backends
+* Refactoring, e.g. optimize scaler RNG
+* Improve behaviour, e.g. formating complex numbers
+* Bug fixes, e.g. invalid tarballs w/ long usernames
+:::
+
+::::
+
+## Documentation bugs
+
+:::: {.columns}
+
+::: {.column width="60%"}
+```{r}
+#| fig.align: center
+knitr::include_graphics("figures/bug_review_Documentation.png")
+```
+:::
+
+::: {.column width="40%"}
+
+* Triaged documentation bugs to find good issues
+* Several closed bugs first reported in 2020
+* Two proposed patches now accepted
+:::
+
+::::
+
+## Package-related issues
+
+:::: {.columns}
+
+::: {.column width="60%"}
+```{r}
+#| fig.align: center
+knitr::include_graphics("figures/bug_review_Packages.png")
+```
+:::
+
+::: {.column width="40%"}
+
+Examples:
+
+* Add support for defining vignette ordering
+* Improve messages to CRAN maintainers
+* Caching installed packages
+:::
+
+::::
+
+## Package-related issues
+
+:::: {.columns}
+
+::: {.column width="60%"}
+```{r}
+#| fig.align: center
+knitr::include_graphics("figures/bug_review_Packages.png")
+```
+:::
+
+::: {.column width="40%"}
+
+Examples:
+
+* Add support for defining vignette ordering
+* Improve messages to CRAN maintainers
+* Caching installed packages
+:::
+
+::::
+
+## Graphics
+
+* 1 closed issue:
+    - [Adding support for "#RGB" colours in R](https://github.com/r-devel/r-project-sprint-2023/issues/74) (in addition to "#RRGGBB")
+    
+* 1 proposed patch:
+    - [Adding Alpha Masks to the Quartz Graphics Device](https://github.com/r-devel/r-project-sprint-2023/issues/43)
+    
+## Accessibility
+
+Two works in progress:
+
+* Logging base graphics (`summary.recordedplot()`)
+    * Enables screenreader users to get information on created graphics
+    
+* Logging R sessions (`ShowMe()`, `SessionLog()`, and `GrabLast()`)
+    * Enables screenreader users to save both input and output created during an R session.
+    
+Functions now available in **BrailleR** on CRAN.
+
+## Statistics
+
+* 1 proposed patch (now accepted)
+    * [Improve behaviour of t.test.formula and wilcox.test.formula for paired tests](https://bugs.r-project.org/show_bug.cgi?id=14359)
+
+* 1 work in progress:
+    * Improved algorithm for sampling with unequal probabilities
+    * Now in [package on GitHub](https://github.com/dickoa/sondage) to enable testing and consideration by R Core
+
+# What next? {.inverse}
+
+## R Contribution Working Group
+
+* Continue work in progress
+* More events
+    - Latin 2023 translation space
+    - useR! 2024 tutorials, Dev Day (TBC)
+* Enagage others
+
+## You?
+
+* Slack: <https://contributor.r-project.org/slack>
+* Meetup: <https://www.meetup.com/r-contributors/>
+* Translation: <https://contributor.r-project.org/translation>
+* Documentation: [overview of open bugs](https://github.com/r-devel/r-project-sprint-2023/issues/38#issuecomment-1702731310)
+* R bugs/wishlist items: 
+    - Browse [R's Bugzilla](https://bugs.r-project.org/), see quick start on 
+    <https://contributor.r-project.org/>
+    - Attend Office Hour
 
 # <https://contributor.r-project.org> {.inverse .larger150}
 
