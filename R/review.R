@@ -76,10 +76,17 @@ area <- unique(review$Area)
 
 for (a in area) {
     review |>
+        mutate(Status2 = factor(Status, levels = c("discussion", "roadmap",
+                                                   "work in progress", "proposed patch",
+                                                   "closed"),
+                                labels = c("discussion", "roadmap",
+                                            "work in\nprogress", "proposed\npatch",
+                                            "closed"))) |>
         filter(Area == a) |>
-        ggplot(aes(fill = Status, y = n, x = Status)) +
+        ggplot(aes(fill = Status2, y = n, x = Status2)) +
         geom_col() +
-        scale_fill_viridis(discrete = TRUE, option = "plasma") +
+        scale_fill_viridis(discrete = TRUE, drop=FALSE, option = "plasma") +
+        scale_x_discrete(drop=FALSE) +
         labs(x = NULL, y = NULL) +
         guides(fill = "none") +
         theme_minimal(base_size = 36) +
@@ -88,5 +95,5 @@ for (a in area) {
               panel.grid.major.x = element_blank())
 
     ggsave(paste0("bug_review_", a, ".png"), path = here::here("figures"), device = "png",
-           width = 9, height = 9, units = "in", dpi = 320)
+           width = 11, height = 7, units = "in", dpi = 320)
 }
