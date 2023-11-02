@@ -237,7 +237,7 @@ knitr::include_graphics('images/heather_turner.jpg')
 
 ## Improved communications
 
-<contributor.r-project.org>
+<https://contributor.r-project.org>
 
 :::: {.columns}
 
@@ -581,7 +581,7 @@ Several have engaged with past RCWG events and initiatives (Collaboration Campir
 ## Preparation
 
 * Existing resources: R Blog posts, useR! tutorials, R Dev Guide, contributor office hours
-* Debugging in R, Shannon Pileggi, R-Ladies Remote, 2hr tutorial 
+* [Debugging in R](https://www.youtube-nocookie.com/embed/179x00KGd9M), Shannon Pileggi, R-Ladies Remote, 2hr tutorial 
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/179x00KGd9M" title="R-Ladies Remote (English) - Debugging in R - Shannon Pileggi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
