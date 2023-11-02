@@ -368,7 +368,7 @@ knitr::include_graphics('images/ella_profile.jpg')
 Particular focus:
 
 * R training at Warwick
-* Community outreach (RainbowR)
+* Community outreach ([RainbowR](https://rainbowr.netlify.app/))
 * General engagement with R Contributor activities
 
 ⛰️ More capacity for bigger challenges!
@@ -800,7 +800,7 @@ Functions now available in **BrailleR** on CRAN.
 
 * Continue work in progress
 * More events
-    - Latin 2023 translation space
+    - LatinR 2023 translation space
     - useR! 2024 tutorials, Dev Day (TBC)
 * Enagage others
 
