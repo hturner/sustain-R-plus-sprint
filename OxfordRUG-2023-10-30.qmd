@@ -619,7 +619,7 @@ Atharva Shirdhankar, supervised by Heather Turner and James Tripp
 
 ## Participants
 
-![](images/R-project-sprint.jpg)
+![Group photo of 38 of the in-person participants, with 2 online participants on Teams on the display screens behind the group](images/R-project-sprint.jpg)
 
 (Not all pictured) 48 in person, 7 online.
 
@@ -639,6 +639,7 @@ Atharva Shirdhankar, supervised by Heather Turner and James Tripp
 ```{r, out.width = "90%"}
 #| echo: false
 #| fig-align: "center"
+#| fig-alt: "Stacked bar chart of translation activities by language, in order of magnitude. Brazilian Portuguese: around 900 translations, about one third new, one third updated and one third approved; Hungarian: around 800 translations, about 500 suggestions and 300 new translations; Spanish: around 600 new translations; Hindi, around 500 suggestions and 100 new/updated translations; Arabic, around 400 suggestions and 200 new translations; Nepali and Turkish, nearly 500 suggestions each; Japanese and Simplfied Chinese, around 50 new/updated translations each; French, Bengali, German, Italian, Dutch and Catalan a small number of suggestions/translations each."
 knitr::include_graphics('figures/translations.png')
 ```
 
@@ -653,7 +654,7 @@ Roughly (need to get actual data): Japanese and Chinese 80-90% translated alread
 
 ::: {.column width="60%"}
 <a href="https://contributor.r-project.org/translations/">
-  <img src="images/translations_site.png">
+  <img alt="screenshot of contributor.r-project.org/translations" src="images/translations_site.png">
 </a>
 :::
 
@@ -686,6 +687,7 @@ Roughly (need to get actual data): Japanese and Chinese 80-90% translated alread
 ::: {.column width="60%"}
 ```{r}
 #| fig.align: center
+#| fig.alt: "Bar chart of progress on low-level issues. Discussion: 6, Roadmap: 1, Work in progress: 5, Proposed patch: 3, Closed: 1"
 knitr::include_graphics("figures/bug_review_Low-level.png")
 ```
 :::
@@ -708,6 +710,7 @@ knitr::include_graphics("figures/bug_review_Low-level.png")
 ::: {.column width="60%"}
 ```{r}
 #| fig.align: center
+#| fig.alt: "Bar chart of progress on documentation issues. Discussion: 0, Roadmap: 1, Work in progress: 0, Proposed patch: 6, Closed: 6"
 knitr::include_graphics("figures/bug_review_Documentation.png")
 ```
 :::
@@ -728,6 +731,7 @@ knitr::include_graphics("figures/bug_review_Documentation.png")
 ::: {.column width="60%"}
 ```{r}
 #| fig.align: center
+#| fig.alt: "Bar chart of progress on package-related issues. Discussion: 1, Roadmap: 1, Work in progress: 1, Proposed patch: 2, Closed: 0"
 knitr::include_graphics("figures/bug_review_Packages.png")
 ```
 :::
