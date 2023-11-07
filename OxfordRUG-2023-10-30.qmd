@@ -619,7 +619,7 @@ Atharva Shirdhankar, supervised by Heather Turner and James Tripp
 
 ## Participants
 
-![Group photo of 38 of the in-person participants, with 2 online participants on Teams on the display screens behind the group](images/R-project-sprint.jpg)
+<img alt="Group photo of 38 of the in-person participants, with 2 online participants on Teams on the display screens behind the group" src="images/R-project-sprint.jpg">
 
 (Not all pictured) 48 in person, 7 online.
 
